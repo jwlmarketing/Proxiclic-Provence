@@ -1,0 +1,41 @@
+{
+  "rewrites": [
+    { "source": "/wp-admin/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/wp-login.php", "destination": "/pas-de-cms/" },
+    { "source": "/wp-content/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/wp-includes/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/wp-config.php", "destination": "/pas-de-cms/" },
+    { "source": "/xmlrpc.php", "destination": "/pas-de-cms/" },
+    { "source": "/administrator/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/joomla/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/user/login", "destination": "/pas-de-cms/" },
+    { "source": "/node/add", "destination": "/pas-de-cms/" },
+    { "source": "/admin/config/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/admin", "destination": "/pas-de-cms/" },
+    { "source": "/admin.php", "destination": "/pas-de-cms/" },
+    { "source": "/admin/login", "destination": "/pas-de-cms/" },
+    { "source": "/adminer.php", "destination": "/pas-de-cms/" },
+    { "source": "/adminer/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/typo3/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/typo3conf/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/umbraco/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/craft/admin/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/ghost/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/magento/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/downloader", "destination": "/pas-de-cms/" },
+    { "source": "/cpanel", "destination": "/pas-de-cms/" },
+    { "source": "/webmail", "destination": "/pas-de-cms/" },
+    { "source": "/phpmyadmin/:path*", "destination": "/pas-de-cms/" },
+    { "source": "/pma/:path*", "destination": "/pas-de-cms/" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

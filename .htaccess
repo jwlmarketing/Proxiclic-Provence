@@ -16,6 +16,25 @@ ErrorDocument 404 /404.html
   RewriteRule ^ https://www.proxiclic-provence.fr%{REQUEST_URI} [L,R=301]
 </IfModule>
 
+# --- "Non, ce site n'a pas de CMS" : les URLs classiques d'admin de CMS
+#     (WordPress, Joomla, Drupal, Magento, TYPO3, Umbraco, Craft, Ghost, etc.)
+#     affichent une page dédiée au lieu d'un 404 générique. Pas de redirection
+#     visible : l'URL tapée par le visiteur/bot reste affichée telle quelle. ---
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_URI} ^/(wp-admin|wp-login\.php|wp-content|wp-includes|wp-config\.php|xmlrpc\.php) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(administrator|joomla) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(user/login|node/add|admin/config) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(admin|admin\.php|admin/login|adminer|adminer\.php) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(typo3|typo3conf) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(umbraco) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(craft|craft/admin) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(ghost) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(magento|admin_.*|downloader) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(shopify|admin/oauth) [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/(cpanel|webmail|phpmyadmin|pma) [NC]
+  RewriteRule ^ /pas-de-cms/ [L]
+</IfModule>
+
 # --- Désactiver l'affichage du contenu des dossiers ---
 Options -Indexes
 
