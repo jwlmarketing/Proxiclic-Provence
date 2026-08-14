@@ -241,6 +241,12 @@ em{ font-style:italic; color:var(--orange-dark); }
   .header-actions .btn.btn-outline{ display:none; }
   .nav-toggle{ display:block; }
 }
+@media (max-width: 420px){
+  /* Sous 420px, le numéro affiché en toutes lettres écrase le nom de la marque
+     (ellipsis type "Proxicli…") ; on garde juste l'icône, le numéro complet
+     reste accessible via le bouton "Appeler maintenant" du contenu. */
+  .tel-numero{ display:none; }
+}
 @media (max-width: 1000px){
   .hero-grid, .grid-2, .contact-grid{ grid-template-columns:1fr; }
   .grid-3{ grid-template-columns:1fr 1fr; }
