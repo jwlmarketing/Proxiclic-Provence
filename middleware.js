@@ -20,23 +20,25 @@ const COOKIE_NAME = 'pp_access';
 export default function middleware(request) {
   if (!LOCKED) return;
 
-  const secret = process.env.PP_ACCESS_SECRET;
-  // Variable d'environnement absente -> on ne peut verifier aucun cookie,
-  // on verrouille sans exception plutot que de risquer un contournement.
-  if (!secret) {
-    return fetch(new URL('/maintenance.html', request.url));
-  }
-
   const url = new URL(request.url);
 
-  // Laisse passer la page de maintenance elle-meme, les fichiers necessaires
-  // a son affichage, et l'endpoint de verification du code.
+  // Laisse TOUJOURS passer la page de maintenance elle-meme, les fichiers
+  // necessaires a son affichage, et l'endpoint de verification du code —
+  // avant meme de regarder si le secret est configure, sinon l'API de
+  // deverrouillage se retrouve elle-meme bloquee.
   if (
     url.pathname === '/maintenance.html' ||
     url.pathname === '/api/unlock' ||
     url.pathname.startsWith('/assets/')
   ) {
     return;
+  }
+
+  const secret = process.env.PP_ACCESS_SECRET;
+  // Variable d'environnement absente -> on ne peut verifier aucun cookie,
+  // on verrouille sans exception plutot que de risquer un contournement.
+  if (!secret) {
+    return fetch(new URL('/maintenance.html', request.url));
   }
 
   const cookieHeader = request.headers.get('cookie') || '';
