@@ -390,7 +390,8 @@ main section[id]{ scroll-margin-top: 110px; }
   font-weight:700; font-size:.92rem; text-decoration:none; display:inline-block; transition:.15s;
 }
 .btn-marine:hover{ background:var(--bleu); transform:translateY(-1px); }
-.hero-stars{ color:var(--orange); font-size:1.3rem; letter-spacing:3px; }
+.hero-stars{ color:var(--orange); font-size:1.3rem; letter-spacing:3px; text-decoration:none; display:inline-block; cursor:pointer; transition:.15s; }
+.hero-stars:hover{ transform:scale(1.05); }
 @media (max-width:860px){ .hero-stars{ justify-content:center; display:flex; } }
 .hero-mascotte{ display:flex; justify-content:center; }
 .hero-mascotte img{ width:100%; max-width:340px; }
