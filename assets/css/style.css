@@ -367,8 +367,17 @@ main section[id]{ scroll-margin-top: 110px; }
    Nouvelle page d'accueil (hero mascotte + slider services)
    ══════════════════════════════════════════════════════ */
 
-.site-header.header-minimal .bar{ justify-content:flex-start; gap:10px; }
+.site-header.header-minimal .bar{
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px;
+}
+.site-header.header-minimal .brand{ grid-column:1; justify-self:start; }
+.site-header.header-minimal .main-nav{ grid-column:2; justify-self:center; }
+.site-header.header-minimal .header-actions{ grid-column:3; justify-self:end; }
 .site-header.header-minimal .brand small{ letter-spacing:.28em; font-size:.62rem; }
+@media (max-width:760px){
+  .site-header.header-minimal .bar{ grid-template-columns:auto auto; }
+  .site-header.header-minimal .main-nav{ display:none; }
+}
 
 .hero-nouveau{ padding:56px 0 40px; }
 .hero-nouveau .hero-grid-v2{
