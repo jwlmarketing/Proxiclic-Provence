@@ -80,7 +80,7 @@ em{ font-style:italic; color:var(--orange-dark); }
 .site-header.is-condensed .brand small{ display:none; }
 .brand span{ overflow:hidden; text-overflow:ellipsis; }
 .brand small{ display:block; font-weight:500; font-size:.7rem; color:var(--texte-doux); white-space:nowrap; }
-.main-nav{ display:flex; gap:clamp(6px, 1.4vw, 22px); flex-wrap:nowrap; min-width:0; flex-shrink:0; }
+.main-nav{ display:flex; gap:clamp(10px, 1.4vw, 22px); flex-wrap:nowrap; min-width:0; flex-shrink:0; }
 .main-nav a{
   font-size:clamp(.72rem, .95vw, .92rem); font-weight:600; color:var(--texte);
   position:relative; padding:4px 0; white-space:nowrap;
