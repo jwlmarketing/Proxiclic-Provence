@@ -109,29 +109,34 @@
 
   <script>
   (function () {
-    // Code maison (pas le Konami classique, trop connu) : un cercle horaire
-    // avec les fleches (haut, droite, bas, gauche) puis on tape "proxi".
-    var sequence = ['ArrowUp','ArrowRight','ArrowDown','ArrowLeft','p','r','o','x','i'];
-    var progress = 0;
+    // Le code attendu n'est JAMAIS present ici : on envoie juste les
+    // dernieres touches tapees a /api/unlock, qui verifie cote serveur
+    // (variable d'environnement Vercel) et pose le cookie si ca correspond.
+    var BUFFER_SIZE = 12;
+    var buffer = [];
+    var pending = false;
 
     document.addEventListener('keydown', function (e) {
+      if (pending) return;
       var key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-      var expected = sequence[progress];
+      buffer.push(key);
+      if (buffer.length > BUFFER_SIZE) buffer.shift();
 
-      if (key === expected) {
-        progress++;
-        if (progress === sequence.length) {
-          unlock();
-          progress = 0;
-        }
-      } else {
-        progress = (key === sequence[0]) ? 1 : 0;
-      }
+      pending = true;
+      fetch('/api/unlock', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ seq: buffer })
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          pending = false;
+          if (data && data.ok) unlock();
+        })
+        .catch(function () { pending = false; });
     });
 
     function unlock() {
-      var maxAge = 60 * 60 * 24 * 30; // 30 jours
-      document.cookie = 'pp_access=31l4xvikquvhzqsp; Path=/; Max-Age=' + maxAge + '; SameSite=Lax';
       var toast = document.getElementById('unlockToast');
       toast.classList.add('show');
       document.body.style.filter = 'blur(2px)';
