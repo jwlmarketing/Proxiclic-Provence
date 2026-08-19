@@ -36,7 +36,7 @@
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header header-minimal">
   <div class="bar">
     <a href="" class="brand">
       <img src="assets/images/proxixli-logo-digne-les-bains.jpeg" alt="Logo Proxiclic-Provence">
@@ -55,50 +55,102 @@
 
 <main>
 
-  <section class="hero">
-    <div class="container hero-grid">
+  <section class="hero-nouveau">
+    <div class="container hero-grid-v2">
       <div>
         <span class="eyebrow">Un service pour chacun</span>
-        <h1>Besoin d'aide avec l'informatique ?<br><em>Vous êtes exactement au bon endroit.</em></h1>
-        <p class="lead">Particuliers, seniors ou professionnels — je m'adapte à vous.</p>
-        <div class="hero-actions">
-          <a href="contact/" class="btn">Contactez-moi</a>
-          <a href="tel:0699405298" class="btn btn-outline">Appeler maintenant</a>
+        <h1>Dépannage informatique en Provence :<br><strong>votre panne s'arrête ici !</strong></h1>
+        <p class="lead">Particuliers, seniors ou professionnels — j'interviens à domicile ou à distance, partout en Alpes-de-Haute-Provence.</p>
+        <div class="hero-actions-v2">
+          <a href="tel:0699405298" class="btn-orange">Appelez moi</a>
+          <a href="#services" class="btn-marine">En savoir plus</a>
         </div>
+        <div class="hero-stars" aria-label="5 étoiles">★★★★★</div>
       </div>
-      <div class="hero-media">
-        <img src="assets/images/assistance-informatique-digne-les-bains-1.png" alt="Assistance informatique à domicile à Digne-les-Bains">
-        <div class="hero-badge">Intervention à domicile en Alpes-de-Haute-Provence</div>
+      <div class="hero-mascotte">
+        <img src="assets/images/mascotte-renard.png" alt="Mascotte Proxiclic-Provence, votre assistant informatique">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nos services</span>
+        <h2>Un accompagnement pensé pour chaque besoin</h2>
+      </div>
+      <div class="services-slider-wrap">
+        <button class="slider-arrow prev" type="button" aria-label="Services précédents">➜</button>
+        <div class="services-slider" id="servicesSlider">
+          <div class="service-card">
+            <img src="assets/images/service-ordinateurs.png" alt="Réparation d'ordinateurs">
+            <div class="service-card-body">
+              <h3>Ordinateurs</h3>
+              <p>Diagnostic, réparation et optimisation de votre PC ou Mac.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="assets/images/service-imprimante.png" alt="Installation d'imprimante">
+            <div class="service-card-body">
+              <h3>Imprimante</h3>
+              <p>Installation, dépannage et configuration de vos imprimantes.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="assets/images/service-wifi.png" alt="Configuration Wifi">
+            <div class="service-card-body">
+              <h3>Wifi</h3>
+              <p>Optimisation de votre réseau et de la couverture Wifi.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="assets/images/service-maintenance.png" alt="Maintenance informatique">
+            <div class="service-card-body">
+              <h3>Maintenance</h3>
+              <p>Suivi régulier pour garder votre matériel en bon état.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="assets/images/service-changement-materiel.png" alt="Changement de matériel">
+            <div class="service-card-body">
+              <h3>Changement de matériel</h3>
+              <p>Remplacement de composants et mise à niveau de vos appareils.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="assets/images/service-vente-materiel.png" alt="Vente de matériel">
+            <div class="service-card-body">
+              <h3>Vente de matériel</h3>
+              <p>Conseils et vente d'équipements adaptés à vos besoins.</p>
+            </div>
+          </div>
+        </div>
+        <button class="slider-arrow next" type="button" aria-label="Services suivants">➜</button>
+      </div>
+      <div class="section-cta-centre">
+        <a href="contact/" class="btn-marine">En savoir plus</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container confiance-grid">
+      <img src="assets/images/handshake-particuliers-professionnels.png" alt="Confiance entre Proxiclic-Provence et ses clients particuliers et professionnels">
+      <div>
+        <h2>Particuliers <strong>/ Professionnels</strong></h2>
+        <p>Que vous soyez un particulier, une famille ou une entreprise, j'adapte mon accompagnement à vos besoins et à votre rythme. Proximité, écoute et solutions durables : c'est ma façon de travailler avec vous, sur le long terme.</p>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Trois services principaux</span>
-        <h2>Un accompagnement pensé pour chaque profil</h2>
+    <div class="container produit-grid">
+      <div>
+        <h2>Ordinateur, imprimante, Wi-Fi :<br>on règle vos problèmes</h2>
+        <p>Panne, lenteur, réseau capricieux ou matériel à renouveler : je m'occupe de tout, avec des solutions claires et adaptées à votre budget, sans jargon inutile.</p>
+        <a href="contact/" class="btn-orange">Contactez-moi</a>
       </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="icon">👨‍👩‍👧</div>
-          <h3>Familles & particuliers</h3>
-          <p>Un accompagnement sur-mesure, à domicile, pour toute la famille.</p>
-          <a href="#domicile" class="more">En savoir plus →</a>
-        </div>
-        <div class="card">
-          <div class="icon">🤝</div>
-          <h3>Accompagnement & aide</h3>
-          <p>Patience et écoute garanties, notamment pour les seniors.</p>
-          <a href="#domicile" class="more">En savoir plus →</a>
-        </div>
-        <div class="card">
-          <div class="icon">💼</div>
-          <h3>Entreprises & indépendants</h3>
-          <p>Solutions informatiques dédiées aux professionnels du territoire.</p>
-          <a href="#professionnels" class="more">En savoir plus →</a>
-        </div>
-      </div>
+      <img src="assets/images/produit-device-blanc.png" alt="Matériel informatique">
     </div>
   </section>
 

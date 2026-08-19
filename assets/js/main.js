@@ -99,4 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  const slider = document.getElementById('servicesSlider');
+  if (slider) {
+    const pas = () => (slider.querySelector('.service-card')?.offsetWidth || 260) + 18;
+    document.querySelectorAll('.slider-arrow.next').forEach(btn => {
+      btn.addEventListener('click', () => slider.scrollBy({ left: pas(), behavior: 'smooth' }));
+    });
+    document.querySelectorAll('.slider-arrow.prev').forEach(btn => {
+      btn.addEventListener('click', () => slider.scrollBy({ left: -pas(), behavior: 'smooth' }));
+    });
+  }
 });
