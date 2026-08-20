@@ -438,7 +438,7 @@ main section[id]{ scroll-margin-top: 110px; }
 
 /* ── Confiance (poignée de main) ── */
 .confiance-grid{
-  display:grid; grid-template-columns:.9fr 1.1fr; gap:44px; align-items:center;
+  display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center;
 }
 @media (max-width:860px){ .confiance-grid{ grid-template-columns:1fr; text-align:center; } }
 .confiance-grid img{ border-radius:var(--rayon); width:100%; }
