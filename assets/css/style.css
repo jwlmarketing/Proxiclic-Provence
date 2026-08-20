@@ -397,10 +397,11 @@ main section[id]{ scroll-margin-top: 110px; }
 }
 .btn-orange:hover{ background:var(--orange-dark); transform:translateY(-1px); }
 .btn-marine{
-  background:var(--nuit); color:#fff; padding:14px 30px; border-radius:99px;
+  background:var(--orange); color:#fff; padding:14px 30px; border-radius:99px;
   font-weight:700; font-size:.92rem; text-decoration:none; display:inline-block; transition:.15s;
+  box-shadow:var(--ombre-sm);
 }
-.btn-marine:hover{ background:var(--bleu); transform:translateY(-1px); }
+.btn-marine:hover{ background:var(--orange-dark); transform:translateY(-1px); }
 .hero-stars{ color:#FFC53D; font-size:1.3rem; letter-spacing:3px; text-decoration:none; display:inline-block; cursor:pointer; transition:.15s; }
 .hero-stars:hover{ transform:scale(1.05); }
 @media (max-width:860px){ .hero-stars{ justify-content:center; display:flex; } }
