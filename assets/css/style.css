@@ -40,6 +40,7 @@ h1,h2,h3,h4{
   margin:0 0 .5em;
   font-weight:600;
 }
+h2{ font-size:clamp(1.7rem, 3vw, 2.4rem); }
 p{ margin:0 0 1em; color:var(--texte-doux); }
 a{ color:inherit; text-decoration:none; }
 img{ max-width:100%; display:block; border-radius:var(--rayon-sm); }
@@ -53,6 +54,10 @@ ul{ margin:0; padding:0; list-style:none; }
 }
 .poids-leger{ font-weight:400; }
 .titre-centre{ text-align:center; }
+
+/* Tous les titres/CTA sont centres, sauf le hero (voir .hero-nouveau / .pro-hero) */
+.produit-grid > div, .confiance-grid > div{ text-align:center; }
+.zones-band{ text-align:center; }
 
 /* Header — collé pleine largeur au repos, se condense en pastille flottante au scroll */
 .site-header{
@@ -402,6 +407,8 @@ main section[id]{ scroll-margin-top: 110px; }
   box-shadow:var(--ombre-sm);
 }
 .btn-marine:hover{ background:var(--orange-dark); transform:translateY(-1px); }
+.hero-actions-v2 .btn-marine{ background:var(--nuit); }
+.hero-actions-v2 .btn-marine:hover{ background:var(--bleu); }
 .hero-stars{ color:#FFC53D; font-size:1.3rem; letter-spacing:3px; text-decoration:none; display:inline-block; cursor:pointer; transition:.15s; }
 .hero-stars:hover{ transform:scale(1.05); }
 @media (max-width:860px){ .hero-stars{ justify-content:center; display:flex; } }
@@ -445,7 +452,6 @@ main section[id]{ scroll-margin-top: 110px; }
 }
 @media (max-width:860px){ .confiance-grid{ grid-template-columns:1fr; text-align:center; } }
 .confiance-grid img{ border-radius:var(--rayon); width:100%; }
-.confiance-grid h2{ font-size:1.6rem; }
 .confiance-grid h2 strong{ display:block; color:var(--nuit); font-weight:700; }
 
 /* ── Produit blanc ── */
@@ -501,7 +507,6 @@ main section[id]{ scroll-margin-top: 110px; }
 }
 @media (max-width:860px){ .qui-grid{ grid-template-columns:1fr; text-align:center; } }
 .qui-grid img{ max-width:320px; margin:0 auto; width:100%; }
-.qui-grid h2{ font-size:1.7rem; }
 .qui-grid h2 strong{ display:block; color:var(--nuit); font-weight:700; }
 
 /* ── Méthode ── */
