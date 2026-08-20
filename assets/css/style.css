@@ -1,5 +1,5 @@
 /* Proxiclic-Provence — feuille de style principale */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
 
 :root{
   --bleu: #06224E;
@@ -34,7 +34,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3,h4{
-  font-family:'Bricolage Grotesque', system-ui, sans-serif;
+  font-family:'Poppins', system-ui, sans-serif;
   color:var(--nuit);
   line-height:1.15;
   margin:0 0 .5em;
@@ -125,7 +125,7 @@ em{ font-style:italic; color:var(--orange-dark); }
 .hero-badge{
   position:absolute; bottom:-22px; left:-22px; background:#fff;
   border-radius:var(--rayon-sm); padding:16px 20px; box-shadow:var(--ombre);
-  font-family:'Bricolage Grotesque', sans-serif; font-weight:600; max-width:220px; font-size:.95rem;
+  font-family:'Poppins', sans-serif; font-weight:600; max-width:220px; font-size:.95rem;
   border-left:4px solid var(--orange);
 }
 
@@ -198,7 +198,7 @@ em{ font-style:italic; color:var(--orange-dark); }
   border-top:1px solid rgba(255,255,255,.12); margin-top:50px; padding-top:24px;
   display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.82rem; color:rgba(242,241,241,.55);
 }
-.footer-quote{ font-family:'Bricolage Grotesque', sans-serif; font-style:italic; color:#F2F1F1; margin-top:10px; }
+.footer-quote{ font-family:'Poppins', sans-serif; font-style:italic; color:#F2F1F1; margin-top:10px; }
 .footer-logos{ display:flex; gap:14px; align-items:center; margin-top:14px; }
 .footer-logos img{ height:34px; width:auto; filter:brightness(0) invert(1); opacity:.85; }
 
@@ -318,7 +318,7 @@ main section[id]{ scroll-margin-top: 110px; }
 .ere:nth-child(odd) .ere-carte{ margin-left:0; }
 .ere:nth-child(even) .ere-carte{ margin-left:calc(50% + 40px); }
 .ere-annee{
-  display:inline-block; font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:2.2rem;
+  display:inline-block; font-family:'Poppins', sans-serif; font-weight:700; font-size:2.2rem;
   color:var(--bleu); line-height:1;
 }
 .ere-date{ display:block; font-size:.75rem; color:var(--texte-doux); text-transform:uppercase; letter-spacing:.08em; margin-top:4px; }
