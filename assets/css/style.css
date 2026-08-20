@@ -52,6 +52,7 @@ ul{ margin:0; padding:0; list-style:none; }
   margin-bottom:16px;
 }
 .poids-leger{ font-weight:400; }
+.titre-centre{ text-align:center; }
 
 /* Header — collé pleine largeur au repos, se condense en pastille flottante au scroll */
 .site-header{
