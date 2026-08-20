@@ -510,7 +510,7 @@ main section[id]{ scroll-margin-top: 110px; }
 @media (max-width:560px){ .methode-grid{ grid-template-columns:1fr; } }
 .methode-card{ text-align:center; }
 .methode-card img{
-  width:480px; height:480px; max-width:100%; border-radius:50%; object-fit:cover; margin:0 auto 16px;
+  width:282px; max-width:100%; aspect-ratio:1/1; border-radius:50%; object-fit:cover; margin:0 auto 16px;
   box-shadow:var(--ombre-sm);
 }
 .methode-card h3{ font-size:1rem; margin-bottom:8px; }
