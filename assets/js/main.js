@@ -110,4 +110,41 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => slider.scrollBy({ left: -pas(), behavior: 'smooth' }));
     });
   }
+
+  // --- Slider avis Google : flèches + défilement automatique ---
+  const avisSlider = document.getElementById('avisSlider');
+  if (avisSlider) {
+    const pasAvis = () => (avisSlider.querySelector('.avis-card')?.offsetWidth || 280) + 18;
+    const finDeCourse = () => avisSlider.scrollLeft + avisSlider.clientWidth >= avisSlider.scrollWidth - 4;
+
+    const avancer = () => {
+      if (finDeCourse()) {
+        avisSlider.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        avisSlider.scrollBy({ left: pasAvis(), behavior: 'smooth' });
+      }
+    };
+    const reculer = () => {
+      if (avisSlider.scrollLeft <= 4) {
+        avisSlider.scrollTo({ left: avisSlider.scrollWidth, behavior: 'smooth' });
+      } else {
+        avisSlider.scrollBy({ left: -pasAvis(), behavior: 'smooth' });
+      }
+    };
+
+    document.querySelectorAll('.avis-arrow.next').forEach(btn => btn.addEventListener('click', () => { avancer(); redemarrerAuto(); }));
+    document.querySelectorAll('.avis-arrow.prev').forEach(btn => btn.addEventListener('click', () => { reculer(); redemarrerAuto(); }));
+
+    let minuteurAuto;
+    const demarrerAuto = () => { minuteurAuto = setInterval(avancer, 3500); };
+    const arreterAuto = () => clearInterval(minuteurAuto);
+    const redemarrerAuto = () => { arreterAuto(); demarrerAuto(); };
+
+    avisSlider.addEventListener('mouseenter', arreterAuto);
+    avisSlider.addEventListener('mouseleave', demarrerAuto);
+    avisSlider.addEventListener('touchstart', arreterAuto, { passive: true });
+    avisSlider.addEventListener('touchend', demarrerAuto);
+
+    demarrerAuto();
+  }
 });

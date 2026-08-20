@@ -459,7 +459,18 @@ main section[id]{ scroll-margin-top: 110px; }
 .avis-note-detail{ font-size:.86rem; color:var(--texte-doux); }
 .avis-note-detail a{ color:var(--bleu); font-weight:700; }
 .avis-disclaimer{ font-size:.78rem; color:var(--texte-doux); margin-top:4px; }
-.avis-slider-wrap{ margin-top:24px; }
+.avis-slider-wrap{ margin-top:24px; position:relative; }
+.avis-arrow{
+  position:absolute; top:calc(50% - 12px); transform:translateY(-50%); width:44px; height:44px; border-radius:50%;
+  background:var(--bleu); color:#fff; border:none; cursor:pointer; display:flex;
+  align-items:center; justify-content:center; box-shadow:0 8px 20px -6px rgba(6,34,78,.5);
+  transition:.15s; z-index:2;
+}
+.avis-arrow:hover{ background:var(--bleu-dark); transform:translateY(-50%) scale(1.06); }
+.avis-arrow.next{ right:-14px; }
+.avis-arrow.prev{ left:-14px; transform:translateY(-50%) scaleX(-1); }
+.avis-arrow.prev:hover{ transform:translateY(-50%) scaleX(-1) scale(1.06); }
+@media (max-width:640px){ .avis-arrow{ display:none; } }
 .avis-slider{
   display:flex; gap:18px; overflow-x:auto; scroll-behavior:smooth; scroll-snap-type:x mandatory;
   padding-bottom:6px; -ms-overflow-style:none; scrollbar-width:none;
