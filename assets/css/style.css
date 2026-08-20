@@ -56,8 +56,12 @@ ul{ margin:0; padding:0; list-style:none; }
 .titre-centre{ text-align:center; }
 
 /* Tous les titres/CTA sont centres, sauf le hero (voir .hero-nouveau / .pro-hero) */
-.produit-grid > div, .confiance-grid > div{ text-align:center; }
-.zones-band{ text-align:center; }
+.produit-grid > div h2, .confiance-grid > div h2{ text-align:center; }
+.produit-grid > div p, .confiance-grid > div p{ text-align:justify; }
+.produit-grid > div .btn-orange, .produit-grid > div .btn-marine,
+.confiance-grid > div .btn-orange, .confiance-grid > div .btn-marine{ display:table; margin-left:auto; margin-right:auto; }
+.zones-band h3{ text-align:center; }
+.zones-band p{ text-align:justify; }
 
 /* Header — collé pleine largeur au repos, se condense en pastille flottante au scroll */
 .site-header{
