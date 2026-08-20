@@ -59,7 +59,9 @@ ul{ margin:0; padding:0; list-style:none; }
 .produit-grid > div h2, .confiance-grid > div h2{ text-align:center; }
 .produit-grid > div p, .confiance-grid > div p{ text-align:justify; }
 .produit-grid > div .btn-orange, .produit-grid > div .btn-marine,
-.confiance-grid > div .btn-orange, .confiance-grid > div .btn-marine{ display:table; margin-left:auto; margin-right:auto; }
+.confiance-grid > div .btn-orange, .confiance-grid > div .btn-marine{
+  display:table; margin-left:auto; margin-right:auto; margin-top:auto;
+}
 .zones-band h3{ text-align:center; }
 .zones-band p{ text-align:justify; }
 
@@ -452,16 +454,18 @@ main section[id]{ scroll-margin-top: 110px; }
 
 /* ── Confiance (poignée de main) ── */
 .confiance-grid{
-  display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center;
+  display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:stretch;
 }
+.confiance-grid > div{ display:flex; flex-direction:column; }
 @media (max-width:860px){ .confiance-grid{ grid-template-columns:1fr; text-align:center; } }
 .confiance-grid img{ border-radius:var(--rayon); width:100%; }
 .confiance-grid h2 strong{ display:block; color:var(--nuit); font-weight:700; }
 
 /* ── Produit blanc ── */
 .produit-grid{
-  display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center;
+  display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:stretch;
 }
+.produit-grid > div{ display:flex; flex-direction:column; }
 @media (max-width:860px){ .produit-grid{ grid-template-columns:1fr; text-align:center; } }
 .produit-grid img{ border-radius:var(--rayon); width:100%; aspect-ratio:4/3.4; object-fit:cover; box-shadow:var(--ombre); }
 
