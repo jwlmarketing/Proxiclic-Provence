@@ -14,7 +14,7 @@
 
 export const config = { matcher: '/:path*' };
 
-const LOCKED = true;
+const LOCKED = false;
 const COOKIE_NAME = 'pp_access';
 
 export default function middleware(request) {
