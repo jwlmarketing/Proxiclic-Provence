@@ -7,5 +7,6 @@
     <img src="https://copyright01.com/badge/EFFD6355D395DD6EC192E23FAE5634B6.svg" alt="Protected by Copyright01" />
   </a>
   <br>
-  <sub>Protected by <a href="https://copyright01.com">Copyright01</a> - Ref: CR-2026-72634 - Certified 2026-08-20</sub>
+  <sub>Nous avons pris le temps de protéger notre Repo git avec <a href="https://copyright01.com">Copyright01</a> - Ref: CR-2026-72634 - Certified 2026-08-20</sub>
 </p>
+- JWL Marketing
